@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    position: relative;
+}
+
+.analogyclock {
+    background-color: rgb(36, 36, 36);
+    min-height: 60vh;
+    min-width: 60vh;
+    border-radius: 190px;
+    border: 3px solid white;
+    box-shadow: 50px whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analogyclock span {
+    position: absolute;
+    transform: rotate(calc(30deg*var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.analogyclock span b {
+    transform: rotate(calc(-30deg*var(--i)));
+    display: inline-block;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.analogyclock::before {
+    background-color: whitesmoke;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    content: "";
+    border-radius: 15px;
+}
+
+.hand {
+    background-color: aliceblue;
+    height: 80px;
+    width: 4px;
+    margin-bottom: 40px;
+    position: absolute;
+    transform-origin: bottom center;
+}
+
+.secs {
+    height: 140px;
+    width: 2px;
+    margin-bottom: 140px;
+}
+
+.mins {
+    height: 110px;
+    background-color: blue;
+    margin-bottom: 120px;
+}
+
+.hours {
+    margin-bottom: 80px;
+    background-color: red;
+}
